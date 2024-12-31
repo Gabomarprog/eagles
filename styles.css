@@ -1,0 +1,506 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Color de fondo claro */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    overflow-x: hidden;
+}
+header {
+    /* Azul oscuro */
+    clip-path: polygon(100% 94%, 100% 0, 0 0, 0 95%, 50% 100%);
+    background-image: url('file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.49_a91eb108.jpg');
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad del 50% */
+    margin-bottom:10px;
+    background-blend-mode: overlay; /* Mezcla la imagen con el color */
+    background-position: center;
+    color: white;
+    padding: 250px 0;
+    text-align: center;
+    
+    
+}
+
+header h1 {
+    margin-top: -300px; /* Ajusta este valor para mover el texto hacia arriba o abajo */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 0px;
+}
+section {
+    
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(10, 80, 166, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+section:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgba(0, 119, 255, 0.377);
+    box-shadow: 0 20px 40px rgba(58, 95, 206, 0.5);
+}
+h2 {
+   
+    
+    color: #0056b3; /* Azul medio */
+   
+    text-align: center ;
+
+    
+
+}
+
+.subrayado {
+    display: block; /* Hace que ocupe toda la línea */
+    width: 20%; /* Ancho del subrayado (ajustar según necesidad) */
+    height: 4px; /* Grosor del subrayado */
+    background: linear-gradient(90deg, #004c78, transparent); /* Color y efecto de desvanecimiento */
+    margin: 0 auto; /* Centra el subrayado en relación al título */
+}
+
+
+
+
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px; /* Ajusta el tamaño según sea necesario */
+    font-weight: normal;
+    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+}
+
+
+
+
+h1.scrolled {
+    transform: scale(1.9); /* Aumentar tamaño */
+    opacity: 0; /* Desvanecer */
+}
+
+.cta-button {
+    background-color: #007bff; /* Azul brillante */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero {
+    background-image: url('file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.49_a91eb108.jpg'); /* URL de la imagen de fondo */
+    background-size: cover; /* Cubre todo el área del contenedor */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Color del texto sobre la imagen */
+    padding: 200px 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Necesario para el pseudo-elemento */
+}
+
+#hero::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 1; /* Asegura que esté detrás del texto */
+}
+
+#hero h2, #hero p {
+    position: relative; /* Necesario para que el texto esté por encima del pseudo-elemento */
+    z-index: 2; /* Asegura que el texto esté por encima del fondo semitransparente */
+    text-shadow: 2px 2px 4px rgba(192, 14, 14, 0.599); /* Sombra del texto para mayor legibilidad */
+}
+
+
+
+
+.features-list, .traders-list, .testimonials-list, .withdraws-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    justify-content: space-around; /* Espaciado entre elementos */
+}
+.feature-item, .trader-item, .testimonial-item, .withdraw-item {
+    text-align: center;
+    width: calc(20% - 40px); /* Ajusta el ancho y deja espacio para márgenes */
+    margin-bottom: 20px; /* Margen inferior para separación */
+    min-width: 280px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    transition: all 0.4s ease;
+}
+.trader-item:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 166, 255, 0.529);
+    box-shadow: 0 10px 25px rgba(30, 56, 223, 0.15);
+}
+.feature-item img, .trader-item img {
+    width: 150px; /* Ajusta el tamaño del icono */
+}
+.trader-item img {
+    width: 200px; /* Ajusta el tamaño de la imagen del trader */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2); /* Sombra para el efecto 
+    /*border: 1px solid #3498db; /* Agrega un borde azul de 4 píxeles */
+}
+
+.testimonial-item p {
+    font-style: italic; /* Estilo para los testimonios */
+}
+.withdraw-item img {
+    width: 100%; /* Capturas de pantalla responsivas */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+#info {
+    text-align:center ;
+    
+    }
+
+#tp {
+    padding-top:100px;
+color: #ffffff ;
+font-family: 'Poppins', sans-serif;
+
+
+font-size: 36px; /* Ajusta el tamaño según sea necesario */
+    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+ }
+
+ #inicio {
+    padding-top:100px;
+    font-family: 'Playfair Display', serif; /* Aplica la fuente a todo el cuerpo */
+    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+    font-size: 30px; /* Ajusta el tamaño según sea necesario */
+   
+ }
+h3{
+    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+}
+ h3.scrolled {
+    transform: scale(1.9); /* Aumentar tamaño */
+    opacity: 0; /* Desvanecer */
+}
+
+ #inicio2 {
+    
+    font-family: 'Playfair Display', serif; /* Aplica la fuente a todo el cuerpo */
+   
+    font-size: 20px; /* Ajusta el tamaño según sea necesario */
+ }
+
+ #h1.scrolled {
+    transform: scale(1.5); /* Aumentar tamaño */
+    opacity: 0; /* Desvanecer */
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366; /* Azul oscuro */
+    color: white;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Cambia a bloque en pantallas pequeñas */
+        margin-bottom: 10px; /* Espaciado entre elementos del menú */
+        text-align: center; /* Centra los enlaces del menú */
+    }
+    .feature-item, .trader-item, .testimonial-item, .withdraw-item {
+        width: calc(50% - 20px); /* Dos elementos por fila en pantallas pequeñas */
+        margin-bottom: 15px; /* Margen inferior para separación */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item, .trader-item, .testimonial-item, .withdraw-item {
+        width: calc(100% - 20px); /* Un elemento por fila en pantallas muy pequeñas */
+        margin-bottom: 15px; /* Margen inferior para separación */
+    }
+}
+
+.logo{
+
+    position: absolute; /* O fixed, dependiendo de tu diseño */
+    top: -20px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la izquierda */
+    
+
+}
+
+.float-wa {
+    position: fixed;
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #25D366; /* Color del fondo */
+    color: #FFF; /* Color del icono */
+    border-radius: 50%; /* Hace el botón circular */
+    text-align: center;
+    font-size: 24px; /* Tamaño del icono */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.float-wa img {
+    width: 50px; /* Tamaño del icono dentro del botón */
+    height: auto; /* Mantiene la proporción del icono */
+}
+
+.float-wa:hover {
+    background-color: #128C7E; /* Cambia el color al pasar el mouse */
+}
+
+
+.card {
+    background:white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 157, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    padding: 3.5rem;
+    margin-bottom: 1rem;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    
+}
+
+.card.trading-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('file:///C:/Users/Admin/Pictures/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.33_dc21fb6c.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgba(0, 119, 255, 0.377);
+    box-shadow: 0 20px 40px rgba(0, 119, 255, 0.377);
+}
+
+.card h2 {
+    text-align: center ;
+    color: #0056b3; /* Azul medio */
+   
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+   
+}
+
+.investors-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #006aff rgba(255,255,255,0.1);
+}
+
+.investors-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.investors-grid::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+}
+
+.investors-grid::-webkit-scrollbar-thumb {
+    background: #00ff88;
+    border-radius: 4px;
+}
+
+.investor-card {
+    min-width: 280px;
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 136, 0.1);
+    transition: all 0.4s ease;
+}
+
+.investor-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 255, 136, 0.3);
+    box-shadow: 0 10px 25px rgba(30, 56, 223, 0.15);
+}
+
+.investor-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+   /* border: 3px solid rgba(0, 85, 255, 0.458);*/
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,255,136,0.3);
+}
+
+.investor-card:hover .investor-avatar {
+    border-color: rgba(0, 85, 255, 0.458) ;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+}
+
+.investor-avatar.trader1 {
+    background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader2 {
+    background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader3 {
+    background-image: url('https://images.unsplash.com/photo-1519085360753-9c2a0a7236a3?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader4 {
+    background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader5 {
+    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader6 {
+    background-image: url('https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80');
+}
+
+.investor-avatar.trader7 {
+    background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80');
+}
+
+
+
+
+
+.info-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.content {
+    display: flex; /* Utiliza flexbox para alinear la imagen y el texto */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.imagen {
+    width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.texto {
+    max-width: 600px; /* Limita el ancho del texto */
+}
+
+.cardt {
+    width: 350px;
+    height: 170px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .cardt p {
+    z-index: 1;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .cardt::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(55, 255, 0), #ff2911 );
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .cardt::after {
+    content: '';
+    position: absolute;
+    background-image:url("file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.33_dc21fb6c.jpg") ;
+    background-size: cover; /* Cubre todo el fondo */
+    filter: blur(1px); /* Aplica un desenfoque a la imagen de fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  /* .cardt:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  
+  
+
+
+

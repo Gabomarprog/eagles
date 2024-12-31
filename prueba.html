@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Eagles Rich Academia</title>
+    <style>
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 36px; /* Ajusta el tamaño según sea necesario */
+            transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+        }
+
+        h1.scrolled {
+            transform: scale(1.5); /* Aumentar tamaño */
+            opacity: 0; /* Desvanecer */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background: white;
+            color: black; /* Cambia el color del texto a negro para secciones */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #003366; /* Azul oscuro */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Eagles Rich Capital</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#traders">Quiénes Somos</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#withdraws">Retiros de Ganancias</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="features">
+            <h2>Características Principales</h2>
+            <p>Descripción de las características principales de la plataforma.</p>
+        </section>
+
+        <section id="about">
+            <h2>Acerca de Nosotros</h2>
+            <p>Información sobre la misión y visión de la empresa.</p>
+        </section>
+
+        <!-- Sección adicional para permitir desplazamiento -->
+        <div style="height: 1500px;"> <!-- Sección para permitir el desplazamiento -->
+            <p>Desplázate hacia abajo para ver el efecto en el encabezado.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;2024 Eagles Rich Academia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const h1 = document.getElementById('header-title'); // Usar ID para seleccionar el h1
+            
+            // Cambia la clase si se ha desplazado más de 50px
+            if (window.scrollY > 50) {
+                h1.classList.add('scrolled'); // Añade la clase scrolled
+            } else {
+                h1.classList.remove('scrolled'); // Quita la clase scrolled
+            }
+        });
+    </script>
+</body>
+</html>
+
