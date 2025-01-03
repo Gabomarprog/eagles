@@ -9,7 +9,7 @@ body {
 header {
     /* Azul oscuro */
     clip-path: polygon(100% 94%, 100% 0, 0 0, 0 95%, 50% 100%);
-    background-image: url('file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.49_a91eb108.jpg');
+    background-image: url('img/fondoinicio.jpg');
     background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad del 50% */
     margin-bottom:10px;
     background-blend-mode: overlay; /* Mezcla la imagen con el color */
@@ -486,7 +486,7 @@ footer {
   .cardt::after {
     content: '';
     position: absolute;
-    background-image:url("file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/Imagen%20de%20WhatsApp%202024-12-14%20a%20las%2019.51.33_dc21fb6c.jpg") ;
+    background-image:url("img/fondocoment.jpg") ;
     background-size: cover; /* Cubre todo el fondo */
     filter: blur(1px); /* Aplica un desenfoque a la imagen de fondo */
     background-position: center; /* Centra la imagen */
