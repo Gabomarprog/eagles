@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Trading</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('file:///C:/Users/Admin/Desktop/Nueva%20carpeta/img/fondoinicio.jpg'); /* Imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            position: relative; /* Necesario para posicionar el gráfico */
+        }
+        .grafico-velas {
+            position: absolute; /* Posiciona el gráfico sobre la imagen */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            background-image: url('URL_DE_TUS_VELAS_JAPONAS'); /* Imagen de velas japonesas */
+            background-size: cover; /* Ajusta el gráfico al tamaño del contenedor */
+            opacity: 0.5; /* Ajusta la opacidad para ver la imagen de fondo */
+        }
+        .contenido {
+            position: relative; /* Para que el contenido se muestre sobre el gráfico */
+            text-align: center;
+            padding: 20px;
+            color: white; /* Cambia el color del texto si es necesario */
+        }
+    </style>
+</head>
+<body>
+    <div class="grafico-velas"></div> <!-- Div para las velas japonesas -->
+    <div class="contenido">
+        <h1>Bienvenido a la Página de Trading</h1>
+        <p>Aquí aprenderás sobre las velas japonesas y técnicas de trading.</p>
+    </div>
+</body>
+</html>

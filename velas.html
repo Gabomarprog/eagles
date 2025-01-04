@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Velas Japonesas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #candlestickChart {
+            width: 80%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gráfico de Velas Japonesas</h2>
+    <canvas id="candlestickChart"></canvas>
+
+    <script>
+        const ctx = document.getElementById('candlestickChart').getContext('2d');
+
+        // Datos de ejemplo para las velas japonesas
+        const data = [
+            { t: new Date('2025-01-01').getTime(), o: 100, h: 110, l: 90, c: 105 },
+            { t: new Date('2025-01-02').getTime(), o: 105, h: 115, l: 95, c: 110 },
+            { t: new Date('2025-01-03').getTime(), o: 110, h: 120, l: 100, c: 115 },
+            { t: new Date('2025-01-04').getTime(), o: 115, h: 125, l: 105, c: 120 },
+            { t: new Date('2025-01-05').getTime(), o: 120, h: 130, l: 110, c: 125 },
+            { t: new Date('2025-01-06').getTime(), o: 125, h: 135, l: 115, c: 130 },
+            { t: new Date('2025-01-07').getTime(), o: 130, h: 140, l: 120, c: 135 },
+        ];
+
+        // Configuración del gráfico
+        const candlestickChart = new Chart(ctx, {
+            type: 'candlestick',
+            data: {
+                datasets: [{
+                    label: 'Precio',
+                    data,
+                    borderColor: '#000',
+                    color: {
+                        up: 'rgba(76,175,80,1)', // Color para velas alcistas
+                        down: 'rgba(244,67,54,1)' // Color para velas bajistas
+                    }
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Gráfico de Velas Japonesas'
+                },
+                scales: {
+                    xAxes: [{
+                        type: 'time',
+                        distribution: 'series',
+                        ticks: {
+                            source: 'data'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Precio'
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

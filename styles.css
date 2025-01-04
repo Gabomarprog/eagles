@@ -9,19 +9,35 @@ body {
 header {
     /* Azul oscuro */
     clip-path: polygon(100% 94%, 100% 0, 0 0, 0 95%, 50% 100%);
-    background-image: url('img/fondoinicio.jpg');
+    background-image: url('img/fondoinicio.jpg'), url('img/velas.png');
+    background-repeat: no-repeat, repeat;
+    background-size:cover, 1200px 600px;
     background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad del 50% */
     margin-bottom:10px;
     background-blend-mode: overlay; /* Mezcla la imagen con el color */
     background-position: center;
     color: white;
     padding: 250px 0;
-    text-align: center;
-    
+    text-align: center, -100px center; /* Posiciona la segunda imagen fuera del área visible */;
+    animation: slideInfinite 70s linear infinite; /* Aplica la animación infinita */
     
 }
 
+
+/* Definición de la animación para movimiento infinito */
+@keyframes slideInfinite {
+    from {
+        background-position: center, -100px center; /* Comienza fuera del área visible a la izquierda */
+        opacity: 1; /* Comienza visible */
+    }
+    to {
+        background-position: center, calc(100vw + 100px) center; /* Termina fuera del área visible a la derecha */
+        opacity: 1; /* Mantiene visible durante el movimiento */
+    }
+}
+
 header h1 {
+    text-align: center;
     margin-top: -300px; /* Ajusta este valor para mover el texto hacia arriba o abajo */
 }
 
@@ -29,14 +45,17 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 nav ul li {
     display: inline;
     margin: 0 15px;
+    text-align: center;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 main {
     padding: 0px;
@@ -83,7 +102,7 @@ h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 36px; /* Ajusta el tamaño según sea necesario */
     font-weight: normal;
-    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+    transition: transform 4s ease, opacity 0.5s ease; /* Transiciones suaves */
 }
 
 
@@ -139,19 +158,19 @@ h1.scrolled {
 }
 .feature-item, .trader-item, .testimonial-item, .withdraw-item {
     text-align: center;
-    width: calc(20% - 40px); /* Ajusta el ancho y deja espacio para márgenes */
+    width: calc(10% - 20px); /* Ajusta el ancho y deja espacio para márgenes */
     margin-bottom: 20px; /* Margen inferior para separación */
     min-width: 280px;
     flex: 0 0 auto;
     background: rgba(255, 255, 255, 0.03);
     padding: 2rem;
     border-radius: 15px;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    
     transition: all 0.4s ease;
 }
 .trader-item:hover {
     transform: translateY(-10px);
-    border-color: rgba(0, 166, 255, 0.529);
+    
     box-shadow: 0 10px 25px rgba(30, 56, 223, 0.15);
 }
 .feature-item img, .trader-item img {
@@ -190,12 +209,13 @@ font-size: 36px; /* Ajusta el tamaño según sea necesario */
  #inicio {
     padding-top:100px;
     font-family: 'Playfair Display', serif; /* Aplica la fuente a todo el cuerpo */
-    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+    transition: transform 4s ease, opacity 0.5s ease; /* Transiciones suaves */
     font-size: 30px; /* Ajusta el tamaño según sea necesario */
    
  }
 h3{
-    transition: transform 1s ease, opacity 0.5s ease; /* Transiciones suaves */
+    transition: transform 4s ease, opacity 0.5s ease; /* Transiciones suaves */
+    text-align: center;
 }
  h3.scrolled {
     transform: scale(1.9); /* Aumentar tamaño */
