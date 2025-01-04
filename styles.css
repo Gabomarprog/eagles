@@ -506,10 +506,22 @@ footer {
   @media (max-width: 768px) {
     .features-list, .traders-list, .testimonials-list, .withdraws-list {
         justify-content: center; /* Centra los ítems en pantallas pequeñas */
-        margin: 0 auto; /* Centra el contenedor si es necesario *
+        margin: 0 auto; /* Centra el contenedor si es necesario */
+
+        .float-wa{ 
+            left: calc(50% - 25px); /* Centra horizontalmente el botón (ajusta según el tamaño) */
+            right: auto; /* Desactiva la posición a la derecha */
+            bottom: 20px; /* Mantiene la distancia desde el fondo */
+        }
+
+        body { 
+           overflow-x: hidden;
+        }
+
+        
     }
   
   
 
-
+}
 
