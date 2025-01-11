@@ -452,7 +452,7 @@ footer {
 }
 
 .cardt {
-    width: 350px;
+    width: 450px;
     height: 170px;
     background: #07182E;
     position: relative;
@@ -465,15 +465,17 @@ footer {
   
   .cardt p {
     z-index: 1;
-    color: white;
-    font-size: 17px;
+    color: #f4f4f4;
+    /* color: rgb(0, 102, 255); */
+    font-size: 14px;
     text-align: center;
   }
   
   .cardt::before {
     content: '';
     position: absolute;
-    width: 100px;
+    width:600px;
+    
     background-image: linear-gradient(180deg, rgb(55, 255, 0), #ff2911 );
     height: 130%;
     animation: rotBGimg 3s linear infinite;
@@ -493,9 +495,10 @@ footer {
   .cardt::after {
     content: '';
     position: absolute;
-    background-image:url("img/fondocoment.jpg") ;
+    /* background-color: #e9ecef; */
+    background-image:url("img/fondocoment.jpg") ; 
     background-size: cover; /* Cubre todo el fondo */
-    filter: blur(1px); /* Aplica un desenfoque a la imagen de fondo */
+    filter: blur(2px); /* Aplica un desenfoque a la imagen de fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* No repite la imagen */
     ;
@@ -526,13 +529,17 @@ footer {
         
     }
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
     nav ul li {
         display: block; /* Cambia a bloque en pantallas pequeñas */
         margin-bottom: 10px; /* Espaciado entre elementos del menú */
         text-align: center; /* Centra los enlaces del menú */
     }
+    .cardt {
+        margin-bottom: 20px; /* Aumenta la separación en móviles */
+        padding: 15px; /* Ajusta el padding si es necesario para móviles */
+        border-width: 1px; /* Reduce el grosor del borde si se desea */
+    }
 }
-  
+
+
 
