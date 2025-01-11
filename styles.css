@@ -60,6 +60,10 @@ nav ul li a {
 main {
     padding: 0px;
 }
+
+li {
+    text-align: center;
+}
 section {
     
     margin-bottom: 20px;
@@ -109,7 +113,7 @@ h1 {
 
 
 h1.scrolled {
-    transform: scale(1.9); /* Aumentar tamaño */
+    transform: scale(0.5); /* Aumentar tamaño */
     opacity: 0; /* Desvanecer */
 }
 
@@ -219,7 +223,7 @@ h3{
     text-align: center;
 }
  h3.scrolled {
-    transform: scale(1.9); /* Aumentar tamaño */
+    transform: scale(0.5); /* Aumentar tamaño */
     opacity: 0; /* Desvanecer */
 }
 
@@ -231,7 +235,7 @@ h3{
  }
 
  #h1.scrolled {
-    transform: scale(1.5); /* Aumentar tamaño */
+    transform: scale(0.5); /* Aumentar tamaño */
     opacity: 0; /* Desvanecer */
 }
 
@@ -508,20 +512,27 @@ footer {
         justify-content: center; /* Centra los ítems en pantallas pequeñas */
         margin: 0 auto; /* Centra el contenedor si es necesario */
 
+    }
+
         .float-wa{ 
-            left: calc(50% - 25px); /* Centra horizontalmente el botón (ajusta según el tamaño) */
-            right: auto; /* Desactiva la posición a la derecha */
-            bottom: 20px; /* Mantiene la distancia desde el fondo */
-        }
+          
 
         body { 
            overflow-x: hidden;
         }
 
+       
+
         
     }
-  
-  
 
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Cambia a bloque en pantallas pequeñas */
+        margin-bottom: 10px; /* Espaciado entre elementos del menú */
+        text-align: center; /* Centra los enlaces del menú */
+    }
 }
+  
 
