@@ -465,7 +465,7 @@ footer {
   
   .cardt p {
     z-index: 1;
-    color: #f4f4f4;
+    color: #0e49e1;
     /* color: rgb(0, 102, 255); */
     font-size: 14px;
     text-align: center;
@@ -495,8 +495,8 @@ footer {
   .cardt::after {
     content: '';
     position: absolute;
-    /* background-color: #e9ecef; */
-    background-image:url("img/fondocoment.jpg") ; 
+     background-color: #e9ecef;
+    /* background-image:url("img/fondocoment.jpg") ;  */
     background-size: cover; /* Cubre todo el fondo */
     filter: blur(2px); /* Aplica un desenfoque a la imagen de fondo */
     background-position: center; /* Centra la imagen */
@@ -601,3 +601,41 @@ background-color:rgb(0, 0, 0);
 border-radius: 100px;
 }/* No code was selected, so I will provide a general improvement to the CSS code */
 
+
+
+
+.video-info-section {
+    padding: 20px;
+}
+
+.containerv {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.video-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-container h2 {
+    margin-top: 0;
+}
+
+.info-container p {
+    line-height: 1.6;
+}
