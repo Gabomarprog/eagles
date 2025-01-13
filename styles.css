@@ -244,7 +244,7 @@ h3{
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #003366; /* Azul oscuro */
+    background-color: #ffffff; /* Azul oscuro */
     color: white;
 }
 
@@ -541,5 +541,63 @@ footer {
     }
 }
 
+/*botones de redes sociales*/
 
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease;
+    background-color: #f0f0f0;
+}
+
+.social-button:hover {
+    transform: scale(1.4);
+}
+
+.social-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Colores específicos para cada red social */
+.telegram {
+    background-color: #0088cc;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.texfooter{
+    font-size:10px;
+    color: #0849b8;
+}
+  
+.texfooter1{
+    
+    color: #0849b8;
+}
+
+
+/*logos del footer*/
+
+.logos2{
+background-color:rgb(0, 0, 0);
+border-radius: 100px;
+}/* No code was selected, so I will provide a general improvement to the CSS code */
 
