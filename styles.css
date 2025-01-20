@@ -173,6 +173,53 @@ h1.scrolled {
     
     transition: all 0.4s ease;
 }
+/*estilos del boton terminos de contrato*/
+button {
+    position: relative;
+    font-size: 1em;
+    padding: 0.7em 1.4em;
+    background-color:blue;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(255, 255, 255, 0.3);
+  }
+  
+  button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%, rgb(21, 21, 21) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 .trader-item:hover {
     transform: translateY(-10px);
     
@@ -186,6 +233,15 @@ h1.scrolled {
     border-radius: 50%; /* Hace que la imagen sea redonda */
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2); /* Sombra para el efecto 
     /*border: 1px solid #3498db; /* Agrega un borde azul de 4 píxeles */
+}
+.bandera {
+width: 25px !important;
+padding-left:  5px !important;
+height:25px !important;
+border-radius: 0 !important;
+vertical-align: middle !important;
+box-shadow:none!important;
+
 }
 
 .testimonial-item p {
@@ -246,6 +302,8 @@ footer {
     padding: 10px 0;
     background-color: #ffffff; /* Azul oscuro */
     color: white;
+    justify-content: space-between;
+   
 }
 
 
@@ -400,19 +458,19 @@ footer {
 }
 
 .investor-avatar.trader1 {
-    background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80');
+    background-image: url('perfiles/inversores/img1.jpg');
 }
 
 .investor-avatar.trader2 {
-    background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80');
+    background-image: url('perfiles/inversores/img2.jpg');
 }
 
 .investor-avatar.trader3 {
-    background-image: url('https://images.unsplash.com/photo-1519085360753-9c2a0a7236a3?auto=format&fit=crop&q=80');
+    background-image: url('');
 }
 
 .investor-avatar.trader4 {
-    background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80');
+    background-image: url('perfiles/inversores/img3.jpg');
 }
 
 .investor-avatar.trader5 {
@@ -545,6 +603,7 @@ footer {
 
 .social-buttons {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     padding: 20px;
@@ -583,6 +642,10 @@ footer {
     background-color: #1877f2;
 }
 
+.youtube {
+    background-color: #FF0000; /* Color rojo de YouTube */
+}
+
 .texfooter{
     font-size:10px;
     color: #0849b8;
@@ -603,39 +666,308 @@ border-radius: 100px;
 
 
 
+/*css de la section videos*/
+ 
 
 .video-info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 10px;
     padding: 20px;
+    box-sizing: border-box;
+    margin-left:100px;
 }
 
+.infotext{
+    padding-left:100px;
+}
 .containerv {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    
+    flex: 1;
+    width: 700%;
 }
-
 .video-container {
     flex: 1;
-    padding: 20px;
+    margin-right: 20px;
+    max-width: 500px;
+    height: 325px;
+    overflow: hidden;
+    position: relative; /* Para el overlay */
 }
-
-.video-container video {
+video {
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados */
 }
-
 .info-container {
     flex: 1;
+    padding: 10px;
+}
+.arrow {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007BFF; /* Color azul para las flechas */
+    color: white;
+    border: none;
+    border-radius: 100%;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+.arrow:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;padding: 20px;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente para el overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.video-container:hover .overlay {
+    opacity: 1; /* Mostrar overlay al pasar el mouse */
+}
+.play-button, .pause-button {
+    font-size: 48px;
+    color: #007BFF; /* Color azul para los botones */
+    cursor: pointer;
+    display: none; /* Ocultar inicialmente */
+}
+
+
+.plataimg{
+    background-color: #07182E;
+}
+
+#videoDescription {
+padding-top: 200px;
+left: -530px;
+position: relative;
+font-size:10px;
+   
+}
+
+@media (max-width: 600px) {
+
+    
+#videoDescription {
+    position: relative;
+    padding-top: 20px;
+    left: -30px;
+    font-size: 10px;
+    text-align: center
+    }
+
+}
+
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .video-info-section {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+       margin:0%;
+      padding-left: -40%;
+       align-items: center;
+    }
+
+    .containerv {
+        flex-direction: column; /* Coloca los elementos en columna en pantallas pequeñas */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .video-container {
+        margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio entre el video y la información */
+    }
+
+    .info-container {
+        width: 100%; /* Asegura que la información ocupe todo el ancho */
+    }
+
+    .info-container h2 {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño para el título */
+    }
+
+    .info-container p {
+        font-size: 0.9em; /* Tamaño de fuente más pequeño para el texto */
+    }
+}
+
+
+/*metodo de pago*/
+.metodop {
+    display: flex;
+    position: absolute;
+    margin: 0;
+   left: 0;
+   padding-left: 50px;
+   padding-top:-130px;
+   
+  }
+  
+  .metodotitulo {
+    color: #b39e00;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+  }
+  
+  .qr {
+    
+    position: absolute;
+    text-align: left;
+    margin: 0;
+    padding-top: 50px;
+    padding-left:39px;
+    
+    /* Remover position y top para evitar desplazamientos */
+  }
+
+  /*airtm*/
+  .metodop_airtm {
+    display: flex;
+    position: absolute;
+    margin: 0;
+   left: 0;
+   padding-left: 250px;
+   padding-top:-150px;
+   
+  }
+  
+  .metodotitulo_airtm {
+    color: #0056b3;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+  }
+  
+  .qr_airtm {
+    
+    position: absolute;
+    text-align: left;
+    margin: 0;
+    padding-top: 50px;
+    padding-left:39px;
+    
+    /* Remover position y top para evitar desplazamientos */
+  }
+
+ 
+
+  /* Estilos para pantallas para pequeñas metodo de pago */
+@media (max-width: 768px) {
+    .qr_airtm{
+        width:40px;
+        height: 40px;
+        position: absolute;
+        text-align: left;
+        margin: 0;
+        padding-top: 50px;
+        padding-left:1px;
+    }
+
+    .metodop_airtm {
+        display: flex;
+        position: absolute;
+        margin: 0;
+       left: 0;
+       padding-left: 200px;
+       padding-top:150px;
+       
+      }
+        .qr{
+        width:40px;
+        height: 40px;
+        position: absolute;
+        text-align: left;
+        margin: 0;
+        padding-top: 45px;
+        padding-left:1px;
+    }
+
+    .metodop{
+        display: flex;
+        position: absolute;
+        margin: 0;
+       left: 0;
+       padding-left: 40px;
+       padding-top:150px;
+       
+      }
+}
+
+.logosf{
+    position: relative;
+    padding-top: 100px;
+ 
+}
+  
+
+  /* testimonios en video*/
+
+  .testimonios-v {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
     padding: 20px;
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+    scrollbar-color: #006aff rgba(255,255,255,0.1);
+    scrollbar-width: thin;
+   
 }
 
-.info-container h2 {
-    margin-top: 0;
+.testimonio-v {
+    flex: 0 0 30%; /* Toma el 30% del ancho en pantallas grandes */
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    display: inline-block; /* Permite que los elementos se alineen en línea */
 }
 
-.info-container p {
-    line-height: 1.6;
+.testimonio-v video {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Mantiene la proporción del video */
 }
+
+.testimonio-v p {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .testimonio-v {
+        flex: 0 0 100%; /* Toma el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+
+
+.testimonios-v::-webkit-scrollbar-track {
+    background: #ffffff; /* Color del fondo de la barra de desplazamiento */
+}
+
+
+
+
+
+
+
+
+
+
+
