@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 1.8em;
+        }
+
+        .payment-method {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .qr-code {
+            width: 80%; /* Ajusta el tamaño del código QR para que sea responsivo */
+            max-width: 120px; /* Tamaño máximo para pantallas grandes */
+            height: 120px; /* Altura fija para mantener la forma cuadrada */
+            margin: 10px 0;
+        }
+
+        .wallet-address {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            word-wrap: break-word; /* Permite que las direcciones largas se ajusten */
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+            }
+
+            .wallet-address {
+                font-size: 12px; /* Tamaño de fuente más pequeño para direcciones */
+            }
+        }
+        .subrayado {
+    display: block; /* Hace que ocupe toda la línea */
+    width: 20%; /* Ancho del subrayado (ajustar según necesidad) */
+    height: 4px; /* Grosor del subrayado */
+    background: linear-gradient(90deg, #004c78, transparent); /* Color y efecto de desvanecimiento */
+    margin: 0 auto; /* Centra el subrayado en relación al título */
+}
+
+.float-wa {
+    position: fixed;
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #25D366; /* Color del fondo */
+    color: #FFF; /* Color del icono */
+    border-radius: 50%; /* Hace el botón circular */
+    text-align: center;
+    font-size: 24px; /* Tamaño del icono */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.float-wa img {
+    width: 50px; /* Tamaño del icono dentro del botón */
+    height: auto; /* Mantiene la proporción del icono */
+}
+
+.float-wa:hover {
+    background-color: #128C7E; /* Cambia el color al pasar el mouse */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Metodos de Pagos</h1>
+        <div class="subrayado"></div> <!-- Subrayado debajo del título -->
+        <p>Selecciona tu método de pago:</p>
+        
+        <div class="payment-method">
+            <h2>AirTM</h2>
+            <img src="img/QR/airtm_qr.jpg" alt="Código QR AirTM" class="qr-code" >
+            <p>Escanea el código QR para pagar con AirTM.</p>
+            <div class="wallet-address">
+                Usuario de AirTM: <strong>omar37d5753a</strong> <br>
+                Dirección de AirTM: <strong>otrocamp@gmail.com</strong>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <h2>Binance</h2>
+            <img src="img/QR/binance_qr.jpg" alt="Código QR Binance" class="qr-code" >
+            <p>Escanea el código QR para pagar con Binance.</p>
+            <div class="wallet-address">
+                Id de binance: <strong>39680157</strong> <br>
+                Dirección de Binance: <strong> sercetosdeunemprendedor@gmail.com</strong>
+            </div>
+        </div>
+
+        <div class="note">
+            <p>Recuerda enviar la referencia de tu pago por WhatsApp.</p>
+        </div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+ <a href="https://api.whatsapp.com/send?phone=+584128962847&text=Hola! Vengo de tu pagina web, Acabo de Pagar unos de tus servicios" class="float-wa" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a> 
+</body>
+</html>

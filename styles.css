@@ -174,7 +174,7 @@ h1.scrolled {
     transition: all 0.4s ease;
 }
 /*estilos del boton terminos de contrato*/
-button {
+.botondet {
     position: relative;
     font-size: 1em;
     padding: 0.7em 1.4em;
@@ -186,7 +186,7 @@ button {
     box-shadow: 0.5em 0.5em 0.5em rgba(255, 255, 255, 0.3);
   }
   
-  button::before {
+.botondet::before {
     position: absolute;
     content: '';
     height: 0;
@@ -199,12 +199,12 @@ button {
     transition: 0.3s;
   }
   
-  button:hover::before {
+  .botondet:hover::before {
     width: 1.6em;
     height: 1.6em;
   }
   
-  button:active {
+ .botondet:active {
     box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
     transform: translate(0.1em, 0.1em);
   }
@@ -646,6 +646,10 @@ footer {
     background-color: #FF0000; /* Color rojo de YouTube */
 }
 
+.discord {
+    background-color: #7289DA; /* Color de Discord */
+}
+
 .texfooter{
     font-size:10px;
     color: #0849b8;
@@ -747,9 +751,7 @@ video {
 }
 
 
-.plataimg{
-    background-color: #07182E;
-}
+
 
 #videoDescription {
 padding-top: 200px;
@@ -961,13 +963,143 @@ font-size:10px;
     background: #ffffff; /* Color del fondo de la barra de desplazamiento */
 }
 
+-------------------------/*css de planes*/-----------------------------------------------------------------
+
+.planes{
+
+    font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #007BFF, #00BFFF);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+}
+.containerptr {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
 
 
 
+.cardptr {
+    background: linear-gradient(145deg, #1e3c72, #2a5298);
+    border-radius: 10px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), 
+                -8px -8px 20px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
 
+.cardptr:hover {
+    transform: translateY(-5px);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.3), 
+                -12px -12px 30px rgba(255, 255, 255, 0.1);
+}
 
+.card-titleptr1 {
+    color: #CD7F32 !important;;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.card-titleptr2 {
+    color: #C0C0C0 !important;;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.card-titleptr3 {
+    color: #FFD700 !important;;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.priceptr {
+    font-size: 32px;
+    color: #ffffff;
+    margin: 20px 0;
+    font-weight: bold;
+}
 
+.featuresptr {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
 
+.featuresptr li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #e0e0e0;
+}
 
+.btnptr {
+    background-color: #007BFF !important; 
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    transition: background-color 0.3s, transform 0.3s !important;
+}
 
+.btnptr:hover {
+    background-color: #0056b3!important;
+    transform: scale(1.05)!important;
+}
 
+.featuredptr {
+    border: 2px solid #007BFF;
+    background-color: rgba(231, 243, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .containerptr {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardptr {
+        width: 90%;
+    }
+}
+
+.ribbonptr {
+    position: absolute;
+    right: -60px; /* Ajusta la posición según sea necesario */
+    top: 1px; /* Ajusta la posición según sea necesario */
+    z-index: 1;
+    color: #fff;
+    padding: 20px 40px; /* Aumenta el padding para hacer la cinta más gruesa */
+    font-weight: bold;
+    font-size: 18px; /* Aumenta el tamaño de la fuente para que sea más visible */
+    transform: rotate(45deg);
+    width: 160px; /* Aumenta el ancho de la cinta para que se vea más prominente */
+    text-align: center;
+    box-shadow: 0 15px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    border-radius: 5px;
+}
+
+.goldptr {
+    background-color: #ceb009 ; /* Color dorado */
+}
+
+.silverptr {
+    background-color: #C0C0C0; /* Color plateado */
+}
+
+.bronzept {
+    background-color:#CD7F32; /* Color bronce */
+}
