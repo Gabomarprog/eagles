@@ -677,6 +677,38 @@
     // Cargar el primer video al inicio
     loadVideo();
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkbox = document.getElementById('check');
+        const menuLinks = document.querySelectorAll('.ulplan a');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                checkbox.checked = false; // Desmarca el checkbox
+            });
+        });
+    });
+</script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const nav = document.querySelector('nav');
+        const featuresSection = document.getElementById('features'); // Sección donde quieres que cambie
+        const threshold = 100; // Ajusta este valor según la distancia desde la parte superior
+
+        function handleScroll() {
+            if (featuresSection.getBoundingClientRect().top <= threshold) {
+                nav.classList.add('semi-transparent');
+            } else {
+                nav.classList.remove('semi-transparent');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    });
+</script>
 </body>
 </html>
 
