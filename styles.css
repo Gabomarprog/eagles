@@ -23,6 +23,126 @@ header {
     
 }
 
+/*-----------------------------stylos del menu de navegacion----------------------------------------------------------------- */
+ 
+.checkbtn img {
+    width: 30px; /* Ajusta según sea necesario */
+    height: 30px; /* Ajusta según sea necesario */
+}
+
+nav{
+    background-color: rgb(14, 12, 12); /* Negro semitransparente */
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 127px;
+}
+nav .ulplan{
+    float: right;
+    margin-right: 20%;
+}
+nav .ulplan .liplan{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+nav .ulplan .liplan a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.liplan a.active, .liplan a:hover{
+    
+    background: #2d70dd;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+@media (max-width: 952px){
+   .checkbtn{
+        display: block;
+    }
+    .ulplan{
+        z-index: 9999; /* Asegura que sea más alto */
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0d0a0a;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav .ulplan .liplan{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .ulplan .liplan a{
+        font-size: 20px;
+    }
+    .liplan a:hover, .liplan a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ .ulplan{
+        left:0;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .ulplan{
+        z-index: 9999; /* Asegura que sea más alto */
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0d0a0a;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav .ulplan .liplan{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .ulplan .liplan a{
+        font-size: 20px;
+    }
+    .liplan a:hover, .liplan a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ .ulplan{
+        left:0;
+    }
+}
+
+
+
 
 /* Definición de la animación para movimiento infinito */
 @keyframes slideInfinite {
@@ -976,6 +1096,7 @@ font-size:10px;
             align-items: center;
             height: 100vh;
             color: #fff;
+            text-align: center;
 }
 .containerptr {
     display: flex;
@@ -1072,8 +1193,21 @@ font-size:10px;
     }
 
     .cardptr {
-        width: 90%;
+        width: 80%;
+        
     }
+
+    .featuresptr {
+        padding: 10px; /* Añade padding para mejorar la visibilidad */
+        margin: 0; /* Asegúrate de que no haya márgenes que oculten el contenido */
+    }
+
+    .featuresptr li {
+        font-size: 16px ; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+        color: #ffffff; /* Cambia el color a blanco para que resalte sobre el fondo */
+    }
+    
+    
 }
 
 .ribbonptr {
