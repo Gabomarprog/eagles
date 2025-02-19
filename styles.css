@@ -11,6 +11,7 @@ body {
 }
 header {
     /* Azul oscuro */
+    position: relative;
     clip-path: polygon(100% 94%, 100% 0, 0 0, 0 95%, 50% 100%);
     background-image: url('img/fondoinicio.jpg'), url('img/velas.png');
     background-repeat: no-repeat, repeat;
@@ -1250,4 +1251,14 @@ font-size:10px;
 
 .bronzept {
     background-color:#CD7F32; /* Color bronce */
+}
+
+
+
+.tiker_precio{   
+
+    position: absolute;
+    padding-left:150px;
+    width:80%;
+    padding-top:130px;
 }
