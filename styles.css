@@ -290,13 +290,13 @@ h1.scrolled {
 
 
 
-.features-list, .traders-list, .testimonials-list, .withdraws-list {
+.features-list, .traders-list, .testimonials-list  {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
     justify-content: space-around; /* Espaciado entre elementos */
   
 }
-.feature-item, .trader-item, .testimonial-item, .withdraw-item {
+.feature-item, .trader-item, .testimonial-item {
     text-align: center;
     width: calc(20% - 40px); /* Ajusta el ancho y deja espacio para márgenes */
     margin-bottom: 20px; /* Margen inferior para separación */
@@ -307,6 +307,63 @@ h1.scrolled {
     border-radius: 15px;
     
     transition: all 0.4s ease;
+}
+
+
+.withdraw {
+    padding: 20px;
+}
+.withdraws-list {
+    display: flex; /* Usar flexbox para alinear los elementos en fila */
+    overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.withdraw-item {
+    margin-right: 20px; /* Espaciado entre los elementos */
+    flex: 0 0 auto; /* Evitar que los elementos se reduzcan */
+
+}
+
+.withdraw-item img {
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+
+
+.investor-info {
+    display: flex; /* Usar flexbox para alinear la imagen y el nombre */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    position: absolute; /* Posicionar de forma absoluta */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar el centrado */
+    background-color: rgba(255, 255, 255, 0.808); /* Fondo blanco semi-transparente */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elegante */
+}
+
+.investor-profile {
+    width: 40px; /* Ancho de la imagen del perfil */
+    height: 40px; /* Alto de la imagen del perfil */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-right: 5px; /* Espaciado a la derecha de la imagen */
+}
+
+.withdraw-image {
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    width: 350px; /* Ancho de la imagen de retiro */
+    height: 350px; /* Alto de la imagen de retiro */
+}
+
+.withdraw-item {
+    margin-right: 20px; /* Espaciado entre los elementos */
+    flex: 0 0 auto; /* Evitar que los elementos se reduzcan */
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Para posicionar el perfil sobre la imagen */
 }
 /*estilos del boton terminos de contrato*/
 .botondet {
