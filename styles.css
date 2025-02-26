@@ -316,6 +316,8 @@ h1.scrolled {
 .withdraws-list {
     display: flex; /* Usar flexbox para alinear los elementos en fila */
     overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    scrollbar-color: #006aff rgba(255,255,255,0.1);
+    scrollbar-width: thin;
     white-space: nowrap; /* Evitar que los elementos se envuelvan */
     padding: 10px 0; /* Espaciado vertical */
 }
