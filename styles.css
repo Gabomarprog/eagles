@@ -656,12 +656,10 @@ footer {
 }
 
 .investor-avatar.trader2 {
-    background-image: url('perfiles/inversores/img2.jpg');
+    background-image: url('perfiles/inversores/img8.jpg');
 }
 
-.investor-avatar.trader3 {
-    background-image: url('');
-}
+
 
 .investor-avatar.trader4 {
     background-image: url('perfiles/inversores/img3.jpg');
@@ -671,12 +669,18 @@ footer {
     background-image: url('perfiles/inversores/img4.jpg');
 }
 
-.investor-avatar.trader6 {
-    background-image: url('');
-}
+
 
 .investor-avatar.trader7 {
     background-image: url('perfiles/inversores/img5.jpg');
+}
+
+.investor-avatar.trader8 {
+    background-image: url('perfiles/inversores/img6.jpg');
+}
+
+.investor-avatar.trader9 {
+    background-image: url('perfiles/inversores/img7.jpg');
 }
 
 
@@ -1075,12 +1079,7 @@ font-size:10px;
     }
 
     .metodop_airtm {
-        display: flex;
-        position: absolute;
-        margin: 0;
-       left: 0;
-       padding-left: 200px;
-       padding-top:150px;
+        display: none;
        
       }
         .qr{
@@ -1094,12 +1093,7 @@ font-size:10px;
     }
 
     .metodop{
-        display: flex;
-        position: absolute;
-        margin: 0;
-       left: 0;
-       padding-left: 40px;
-       padding-top:150px;
+        display: none;
        
       }
 }
