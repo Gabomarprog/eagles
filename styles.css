@@ -311,7 +311,7 @@ h1.scrolled {
 
 
 .withdraw {
-    padding: 20px;
+    padding: 100px;
 }
 .withdraws-list {
     display: flex; /* Usar flexbox para alinear los elementos en fila */
@@ -332,6 +332,14 @@ h1.scrolled {
     border-radius: 8px; /* Bordes redondeados para las imágenes */
 }
 
+@media (max-width: 600px) {
+    .withdraws-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+}
 
 
 .investor-info {
@@ -1323,5 +1331,107 @@ font-size:10px;
         padding-left: 14%;
         width:70%;
         padding-top:130px;
+    }
+}
+
+
+
+
+
+
+
+.capturas-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.capturas-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.capturas-container {
+    display: flex;
+    overflow-x: auto; /* Barra de desplazamiento horizontal */
+    scrollbar-color: #006aff rgba(255,255,255,0.1);
+    scrollbar-width: thin;
+    scroll-snap-type: x mandatory; /* Fuerza el desplazamiento por captura */
+    gap: 15px;
+    padding-bottom: 10px;
+    /* Evita el desplazamiento vertical */
+    overflow-y: hidden;
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.captura-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Alinea cada captura al inicio del contenedor */
+    text-align: center;
+    width: 348x; /* Ancho para escritorio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Para posicionar el cuadro flotante */
+}
+
+.captura-item img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.captura-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* Estilos para el cuadro flotante */
+.floating-box {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    /* Distancia desde la izquierda */
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.floating-box img {
+    width: 30px; /* Tamaño pequeño para la imagen de perfil */
+    height: 30px;
+    border-radius: 50%; /* Perfil circular */
+}
+
+.floating-box span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+    .captura-item {
+        width: 90%; /* Ocupa el 90% del ancho de la pantalla en móviles */
+        margin: 0 auto; /* Centra la captura en la pantalla */
+    }
+
+    .capturas-section h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .captura-item {
+        width: 90%; /* Ocupa el 90% del ancho de la pantalla en móviles */
+    }
+
+    .capturas-section h2 {
+        font-size: 18px;
     }
 }
